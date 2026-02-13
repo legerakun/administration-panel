@@ -1,0 +1,272 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0;
+}
+
+.login {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 26px 16px;
+  background: #efefef;
+}
+
+.loginCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  gap: 32px;
+  position: absolute;
+  width: 527px;
+  height: 716px;
+  left: calc(50% - 527px / 2 + 0.5px);
+  top: calc(50% - 716px / 2);
+  background: #ffffff;
+  box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.04);
+  border-radius: 40px;
+
+  &__logo {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    min-height: 52px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px;
+    gap: 32px;
+    width: 515px;
+    height: 704px;
+    background: linear-gradient(180deg, rgba(35, 35, 35, 0.03) 0%, rgba(35, 35, 35, 0) 50%);
+    border-radius: 34px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #232323;
+  }
+
+  &__subtitle {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: #e0e0e0;
+  }
+}
+
+.loginForm {
+  display: grid;
+  gap: 16px;
+  text-align: left;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+
+  &__label {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.015em;
+    color: #232323;
+  }
+
+  &__error {
+    color: #b91c1c;
+    font-size: 12px;
+  }
+}
+
+.inputShell {
+  height: 38px;
+  border: 1px solid #edf0f5;
+  border-radius: 10px;
+  padding: 0 8px;
+  display: grid;
+  grid-template-columns: 22px 1fr 30px;
+  align-items: center;
+  gap: 6px;
+  background: #ffffff;
+
+  &:focus-within {
+    border-color: rgba(37, 99, 235, 0.45);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+  }
+
+  &__error {
+    border-color: #fca5a5;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.015em;
+    color: #232323;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+}
+
+.iconAction {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  border: none;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.rememberRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+  margin-top: 4px;
+  cursor: pointer;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #9c9c9c;
+
+  &__checkbox {
+    width: 14px;
+    height: 14px;
+    accent-color: #367aff;
+  }
+}
+
+.loginButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 8px;
+  gap: 8px;
+  margin-top: 4px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.12) 100%), #242edb;
+  border: 1px solid #367aff;
+  box-shadow:
+    0px 8px 8px rgba(54, 122, 255, 0.03),
+    inset 0px -2px 0px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+.formError {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.loginDivider {
+  position: relative;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  user-select: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ebebeb;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 1px;
+    background: #ededed;
+  }
+
+  & > span {
+    position: relative;
+    padding: 0 10px;
+    background: #ffffff;
+  }
+}
+
+.loginBottom,
+.loginLink {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #6c6c6c;
+}
+
+.loginLink {
+  color: #242edb;
+  font-weight: 600;
+  text-decoration: underline;
+}

@@ -1,0 +1,51 @@
+.popupOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  z-index: 1000;
+}
+
+.popup {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.18);
+
+  &__header {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #333333;
+  }
+
+  &__close {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 1;
+    color: #64748b;
+  }
+
+  &__content {
+    padding: 14px;
+  }
+}

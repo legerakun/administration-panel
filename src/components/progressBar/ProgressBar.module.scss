@@ -1,0 +1,26 @@
+@keyframes progressBarMove {
+  0% {
+    transform: translateX(-40%);
+  }
+  50% {
+    transform: translateX(140%);
+  }
+  100% {
+    transform: translateX(260%);
+  }
+}
+
+.progressBar {
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+
+  &__bar {
+    height: 100%;
+    width: 35%;
+    background: #2563eb;
+    border-radius: 999px;
+    animation: progressBarMove 900ms ease-in-out infinite;
+  }
+}
